@@ -40,19 +40,19 @@ const aboutData = [
       },
     ],
   },
-  {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
-    ],
-  },
+  // {
+  //   title: 'awards',
+  //   info: [
+  //     {
+  //       title: 'Webby Awards - Honoree',
+  //       stage: '2011 - 2012',
+  //     },
+  //     {
+  //       title: 'Adobe Design Achievement Awards - Finalist',
+  //       stage: '2009 - 2010',
+  //     },
+  //   ],
+  // },
   {
     title: 'experience',
     info: [
@@ -74,17 +74,17 @@ const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'Software Development - Coding Dojo',
+        stage: 'Part of Colorado Technical University',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'Bachelors of Science Civil Engineer',
+        stage: 'Universidade Santa Cecilia',
       },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
-      },
+      // {
+      //   title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
+      //   stage: '2006',
+      // },
     ],
   },
 ];
@@ -125,7 +125,7 @@ const About = () => {
             animate='show'
             exit='hidden'
             className='h2'>
-            Captivating <span className='text-amber-500'>stories</span> birth magnificient designs.
+            Hi, I am a <span className='text-amber-500'>Software</span> developer.
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -134,9 +134,11 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            10 years ago, I began freelancing as a developer. Since then, I've 
+            I began my journey after completing a 16 week long bootcamp with 70+ hours a week,
+            colaborating and coding with people all over the world
+            {/* I began freelancing as a developer. Since then, I've 
             done remote work for agencies, counsulted for startups, and 
-            collaborated on digital products for business and consumer use.
+            collaborated on digital products for business and consumer use. */}
           </motion.p>
           {/* counters */}
           <motion.div 
