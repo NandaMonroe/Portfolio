@@ -6,25 +6,25 @@ import {
   RiYoutubeLine,
   RiInstagramLine,
   RiFacebookLine,
-  RiDribbleLine,
-  RiBehanceLine,
+  RiLinkedinLine,
+  RiGithubLine,
   RiPinterestLine,
 } from 'react-icons/ri';
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 text-2xl">
       <Link href={''} className="hover:text-amber-500 transition-all duration-300">
-        <RiYoutubeLine />
+        <RiGithubLine />
       </Link>
       <Link href={''} className="hover:text-amber-500 transition-all duration-300">
         <RiFacebookLine />
       </Link>
       <Link href={''} className="hover:text-amber-500 transition-all duration-300">
-        <RiInstagramLine />
+        <RiLinkedinLine />
       </Link>
       <Link href={''} className="hover:text-amber-500 transition-all duration-300">
-        <RiPinterestLine />
+        <RiInstagramLine />
       </Link>
     </div>
   );

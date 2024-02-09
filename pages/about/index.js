@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// next image
+import Image from 'next/image';
+
 // icons
 import {
   FaHtml5,
@@ -19,6 +22,109 @@ import {
 
 //  data
 const aboutData = [
+  {
+    title: 'Languages',
+    info: [
+      {
+        image: '/java.png',
+        name: 'Java',
+      },
+      {
+        image: '/python.png',
+        name: 'Python',
+      },
+      {
+        image: '/typescript.png',
+        name: 'TypeScript'
+      },
+      {
+        image: '/html-5.png',
+        name: 'Html5'
+      },
+      {
+        image: '/javascript.png',
+        name: 'JavaScript',
+      },
+      {
+        image: '/css-3.png',
+        name: 'CSS',
+      },
+    ],
+  },
+  {
+    title: 'Frameworks',
+    info: [
+      {
+        image: '/atom.png',
+        name: 'React'
+      },
+      {
+        image: '/node.png',
+        name: 'NodeJS',
+      },
+      {
+        image: '/vite.png',
+        name: 'Vite',
+      },
+      {
+        image: '/nextjs.png',
+        name: 'NextJS',
+      },
+    ],
+  },
+  {
+    title: 'Libraries',
+    info: [
+      {
+        image: '/bootstrap.png',
+        name: 'Bootstrap 5'
+      },
+      {
+        image: '/mu5.png',
+        name: 'MaterialUI',
+      },
+      {
+        image: '/tailwind.png',
+        name: 'Tailwind',
+      },
+    ],
+  },
+  {
+    title: 'Database',
+    info: [
+      {
+        image: '/mysql.png',
+        name: 'MySQL',
+      },
+      {
+        image: '/mongodb.png',
+        name: 'MongoDB',
+      },
+    ],
+  },
+  {
+    title: 'Tools',
+    info: [
+      {
+        image: '/springb.png',
+        name: 'SpringBoot',
+      },
+      {
+        image: '/aws.png',
+        name: 'AWS',
+      },
+      {
+        image: '/postman.png',
+        name: 'Postman',
+      },
+      {
+        image: '/git.png',
+        name: 'Git',
+      },
+    ],
+  },
+];
+const aboutDataOriginal = [
   {
     title: 'skills',
     info: [
@@ -40,33 +146,29 @@ const aboutData = [
       },
     ],
   },
-  // {
-  //   title: 'awards',
-  //   info: [
-  //     {
-  //       title: 'Webby Awards - Honoree',
-  //       stage: '2011 - 2012',
-  //     },
-  //     {
-  //       title: 'Adobe Design Achievement Awards - Finalist',
-  //       stage: '2009 - 2010',
-  //     },
-  //   ],
-  // },
+  {
+    title: 'awards',
+    info: [
+      {
+        title: 'Webby Awards - Honoree',
+        stage: '2011 - 2012',
+      },
+      {
+        title: 'Adobe Design Achievement Awards - Finalist',
+        stage: '2009 - 2010',
+      },
+    ],
+  },
   {
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Webby Awards - Honoree',
+        stage: '2011 - 2012',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Adobe Design Achievement Awards - Finalist',
+        stage: '2009 - 2010',
       },
     ],
   },
@@ -80,11 +182,7 @@ const aboutData = [
       {
         title: 'Bachelors of Science Civil Engineer',
         stage: 'Universidade Santa Cecilia',
-      },
-      // {
-      //   title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-      //   stage: '2006',
-      // },
+      }
     ],
   },
 ];
@@ -112,13 +210,14 @@ const About = () => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='hidden xl:flex absolute bottom-0 -right-[50px] max-w-[526px] max-h-[496px]'
+        className='hidden xl:flex absolute bottom-0 -left-[350px] max-w-[726px] max-h-[696px]'
       >
+        {/* max-w-[526px] max-h-[496px] */}
         <Avatar />
       </motion.div>
-      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
-        {/* text */}
-        <div className='flex-1 flex flex-col justify-center'>
+      <div className='container mx-auto h-full flex flex-col xl:flex-row gap-x-6'>
+        <div className='flex-1 flex flex-col'>
+          {/* text */}
           <motion.h2 
             variants={fadeIn('right', 0.2)}
             initial='hidden'
@@ -186,7 +285,7 @@ const About = () => {
           exit='hidden'
           className='flex flex-col w-full xl:max-w-[48%] h-[480px]'
         >
-          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
+          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-10'>
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -202,20 +301,14 @@ const About = () => {
               )
             })}
           </div>
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
+          <div className='py-2 xl:py-6 grid grid-cols-3 grid-rows-3 xl:ml-4 md:mx-auto gap-x-8 gap-y-2 xl:gap-y-4 items-center flex-wrap'>
             {aboutData[index].info.map((item, itemIndex) => {
               return (
-                <div key={itemIndex} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'>
+                <div key={itemIndex} className='flex-1 flex flex-col max-w-max gap-y-6 items-center'>
+                  {/* icons */}
+                  <Image src={item.image} width={100} height={100} alt='' className='flex gap-x-4'/>
                   {/* title */}
-                  <div className='font-light mb-2 md:mb-0'>{item.title}</div>
-                  <div className='hidden md:flex'>-</div>
-                  <div>{item.stage}</div>
-                  <div className='flex gap-x-4'>
-                    {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl text-white'>{icon}</div>
-                    })}
-                  </div>
+                  <div className='font-light'>{item.name}</div>
                 </div>
               );
             })}
