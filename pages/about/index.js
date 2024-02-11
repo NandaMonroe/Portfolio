@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+//next link
+import Link from 'next/link';
+
 // next image
 import Image from 'next/image';
 
@@ -12,6 +15,8 @@ import {
   FaWordpress,
   FaFigma,
 } from "react-icons/fa";
+// icons
+import { RxDownload } from 'react-icons/rx';
 
 import {
   SiNextdotjs,
@@ -239,7 +244,23 @@ const About = () => {
             done remote work for agencies, counsulted for startups, and 
             collaborated on digital products for business and consumer use. */}
           </motion.p>
-          {/* counters */}
+          <motion.div
+            variants={fadeIn('right', 0.6)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='flex items-end flex-row-reverse mr-24'
+          >
+            <Link
+              href={'https://drive.google.com/file/d/1DHgW4Ilxa4Egel5lFBjOSmvWfFcVHnHY/view?usp=sharing'}            
+            >
+              <button className='btn rounded-lg border border-amber-500 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-amber-500 group'>
+                <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 '>Resume</span>
+                <RxDownload className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
+              </button>
+            </Link>
+          </motion.div>
+          {/* counters
           <motion.div 
             variants={fadeIn('right', 0.6)}
             initial='hidden'
@@ -247,7 +268,7 @@ const About = () => {
             exit='hidden'
             className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
             <div className='flex flex-1 xl:gap-x-6'>
-              {/* experience */}
+              experience
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-amber-500 mb-2'>
                   <CountUp start={0} end={5} duration={10} /> +
@@ -256,7 +277,7 @@ const About = () => {
                   Years of experience
                 </div>
               </div>
-              {/* clients */}
+              clients
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-amber-500 mb-2'>
                   <CountUp start={0} end={250} duration={5} /> +
@@ -265,7 +286,7 @@ const About = () => {
                   Satisfied clients
                 </div>
               </div>
-              {/* projects */}
+              projects
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-amber-500 mb-2'>
                   <CountUp start={0} end={650} duration={10} /> +
@@ -275,7 +296,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
         {/* info */}
         <motion.div

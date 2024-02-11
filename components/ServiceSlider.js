@@ -8,7 +8,8 @@ import 'swiper/css/pagination';
 
 // icons
 import {
-  RxCrop,
+  RxGear,
+  RxPerson,
   RxPencil2,
   RxDesktop,
   RxReader,
@@ -22,29 +23,29 @@ import { FreeMode, Pagination } from 'swiper';
 // service data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <RxPerson />,
+    title: 'Front-End',
+    description: 'Work on the client-side of web and mobile apps. Develop of the user interface (UI) and user experience (UX) of applications.',
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <RxGear />,
+    title: 'Back-End',
+    description: 'Work on the server-side of web and mobile apps. Developing and maintaining the databases, servers, and APIs that power applications.',
   },
   {
     icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Full Stack',
+    description: 'Deep understanding of both client-side and server-side development technologies by being able to work on all aspects of a project.',
   },
   {
     icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Web Development',
+    description: 'Building and maintaining websites and web applications.',
   },
   {
     icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Mobile App',
+    description: 'Creating and maintaining applications for mobile devices, such as smartphones and tablets.',
   },
 ];
 
