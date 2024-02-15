@@ -37,9 +37,7 @@ const Home = () => {
             exit='hidden'
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-7 xl:mb-10"
             >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque 
-            nostrum quam reprehenderit vero, tenetur voluptatem nulla aut 
-            aspernatur dolores ut.
+            I'm a full-stack developer specializing in building and designing exceptional digital experiences. Currently, I'm focused on building responsive full-stack web applications.
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">

@@ -72,7 +72,7 @@ const aboutData = [
         name: 'Vite',
       },
       {
-        image: '/nextjs.png',
+        image: '/nextjs2.png',
         name: 'NextJS',
       },
     ],

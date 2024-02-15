@@ -5,19 +5,19 @@ const workSlider = {
       images: [
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/francesco-demo.gif',
         },
         {
           title: 'title',
-          path: '/thumb2.jpg',
+          path: '/traveledge-demo.gif',
         },
         {
           title: 'title',
-          path: '/thumb3.jpg',
+          path: '/e-smart-demo.gif',
         },
         {
           title: 'title',
-          path: '/thumb4.jpg',
+          path: '/sasquatch-demo.gif',
         },
       ],
     },
@@ -29,7 +29,7 @@ const workSlider = {
         },
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/thumb1.png',
         },
         {
           title: 'title',
