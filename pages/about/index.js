@@ -39,11 +39,7 @@ const aboutData = [
         name: 'Python',
       },
       {
-        image: '/typescript.png',
-        name: 'TypeScript'
-      },
-      {
-        image: '/html-5.png',
+        image: '/html.png',
         name: 'Html5'
       },
       {
@@ -51,8 +47,12 @@ const aboutData = [
         name: 'JavaScript',
       },
       {
-        image: '/css-3.png',
+        image: '/css.png',
         name: 'CSS',
+      },
+      {
+        image: '/typescript.png',
+        name: 'TypeScript'
       },
     ],
   },
@@ -220,15 +220,15 @@ const About = () => {
         {/* max-w-[526px] max-h-[496px] */}
         <Avatar />
       </motion.div>
-      <div className='container mx-auto h-full flex flex-col xl:flex-row gap-x-6'>
-        <div className='flex-1 flex flex-col'>
+      <div className='container mx-auto h-fit flex flex-col justify-between md:justify-around lg:justify-between xl:flex-row gap-x-6'>
+        <div className='flex flex-col items-center xl:items-start md:gap-y-10 xl:gap-y-8'>
           {/* text */}
           <motion.h2 
             variants={fadeIn('right', 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='h2'>
+            className='font-semibold text-2xl lg:h2 mb-3'>
             Hi, I am a <span className='text-amber-500'>Software</span> developer.
           </motion.h2>
           <motion.p
@@ -236,7 +236,7 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
+            className='max-w-[500px] mx-auto xl:mx-0 mb-2 xl:mb-12 px-2 xl:px-0'
           >
             I began my journey after completing a 16 week long bootcamp with 70+ hours a week,
             colaborating and coding with people all over the world
@@ -249,12 +249,12 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='flex items-end flex-row-reverse mr-24'
+            className='flex flex-row-reverse mt-2 xl:ml-72'
           >
             <Link
               href={'https://drive.google.com/file/d/1DHgW4Ilxa4Egel5lFBjOSmvWfFcVHnHY/view?usp=sharing'}            
             >
-              <button className='btn rounded-lg border border-amber-500 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-amber-500 group'>
+              <button className='btn rounded-lg border border-amber-500 max-w-[170px] p-3 xl:px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-amber-500 group'>
                 <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 '>Resume</span>
                 <RxDownload className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
               </button>
@@ -304,9 +304,9 @@ const About = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px]'
+          className='flex flex-col w-full xl:max-w-[48%] h-[400px] lg:gap-y-10'
         >
-          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-10'>
+          <div className='flex gap-x-4 md:gap-x-8 mx-auto xl:mx-0 md:mt-8 my-7 items-center'>
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -314,7 +314,7 @@ const About = () => {
                   className={`${
                     index === itemIndex &&
                     'text-amber-500 after:w-[100%] after:bg-amber-500 after:transition-all after:duration-300' 
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  } cursor-pointer capitalize text-sm md:text-lg lg:text-2xl relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -322,14 +322,18 @@ const About = () => {
               )
             })}
           </div>
-          <div className='py-2 xl:py-6 grid grid-cols-3 grid-rows-3 xl:ml-4 md:mx-auto gap-x-8 gap-y-2 xl:gap-y-4 items-center flex-wrap'>
+          <div className='flex py-2 xl:py-6 xl:ml-4 mx-auto gap-x-8 lg:gap-x-12 gap-y-2 md:gap-y-4 lg:gap-y-8 items-center flex-wrap'>
             {aboutData[index].info.map((item, itemIndex) => {
               return (
-                <div key={itemIndex} className='flex-1 flex flex-col max-w-max gap-y-6 items-center'>
+                <div key={itemIndex} className='flex flex-col max-w-max gap-y-3 items-center'>
                   {/* icons */}
-                  <Image src={item.image} width={100} height={100} alt='' className='flex gap-x-4'/>
-                  {/* title */}
-                  <div className='font-light'>{item.name}</div>
+                  <img
+                  className='h-[50px] w-[50px] md:h-[100px] md:w-[100px]'
+                  src={item.image}
+                  />
+                  {/* <Image src={item.image} width={100} height={100} alt=''/> */}
+                  {/* name */}
+                  <p className='font-light'>{item.name}</p>
                 </div>
               );
             })}
