@@ -252,7 +252,7 @@ const About = () => {
             className='flex flex-row-reverse mt-2 xl:ml-72'
           >
             <Link
-              href={'https://drive.google.com/file/d/1DHgW4Ilxa4Egel5lFBjOSmvWfFcVHnHY/view?usp=sharing'}            
+              href={'https://drive.google.com/file/d/1vtO8WJLPqRW6uA4qkF0okdteVzjGNsaG/view?usp=sharing'}            
             >
               <button className='btn rounded-lg border border-amber-500 max-w-[170px] p-3 xl:px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-amber-500 group'>
                 <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 '>Resume</span>
