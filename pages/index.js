@@ -60,13 +60,13 @@ const Home = () => {
         <ParticlesContainer />
         {/* avatar img */}
         <motion.div 
-          variants={fadeIn('down', 0.5)}
+          variants={fadeIn('up', 0.5)}
           initial='hidden'
           animate='show'
           exit='hidden'
           transition={{ duration: 1, ease: 'easeInOut' }}
           style={{ position: 'absolute', right: '50px' }}
-          className="w-full h-full max-w-[626px] max-h-[576px] -bottom-32 lg:bottom-0 lg:right-[8%">
+          className="w-full h-full max-w-[526px] max-h-[476px] -bottom-32 lg:bottom-0 lg:right-[8%">
           <Avatar />
         </motion.div>
       </div>

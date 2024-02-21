@@ -219,7 +219,7 @@ const About = () => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='hidden xl:flex absolute bottom-0 -left-[350px] max-w-[726px] max-h-[696px]'
+        className='hidden xl:flex absolute bottom-0 -left-[300px] max-w-[626px] max-h-[596px]'
       >
         {/* max-w-[526px] max-h-[496px] */}
         <Avatar />
