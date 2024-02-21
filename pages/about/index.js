@@ -204,8 +204,12 @@ import { fadeIn } from '../../variants';
 import CountUp from 'react-countup';
 
 const About = () => {
+
   const [index, setIndex] = useState(0);
   console.log(index)
+
+  const newTab = url => {window.open(url)}
+
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles />
@@ -251,14 +255,10 @@ const About = () => {
             exit='hidden'
             className='flex flex-row-reverse mt-2 xl:ml-72'
           >
-            <Link
-              href={'https://drive.google.com/file/d/1vtO8WJLPqRW6uA4qkF0okdteVzjGNsaG/view?usp=sharing'}            
-            >
-              <button className='btn rounded-lg border border-amber-500 max-w-[170px] p-3 xl:px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-amber-500 group'>
-                <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 '>Resume</span>
-                <RxDownload className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
-              </button>
-            </Link>
+            <button onClick={() => newTab('https://drive.google.com/file/d/1vtO8WJLPqRW6uA4qkF0okdteVzjGNsaG/view?usp=sharing')} className='btn rounded-lg border border-amber-500 max-w-[170px] p-3 xl:px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-amber-500 group'>
+              <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 '>Resume</span>
+              <RxDownload className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
+            </button>
           </motion.div>
           {/* counters
           <motion.div 
