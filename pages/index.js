@@ -1,8 +1,8 @@
 
 //components
-import ParticlesContainer from '../components/ParticlesContainer';
-import ProjectsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
+import ParticlesContainer from '../src/components/ParticlesContainer';
+import ProjectsBtn from '../src/components/ProjectsBtn';
+import Avatar from '../src/components/Avatar';
 
 // framer motion
 import {motion} from 'framer-motion'
