@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // components
-import Socials from '../components/Socials';
+import Socials from './Socials';
 
 const Header = () => {
   return (
