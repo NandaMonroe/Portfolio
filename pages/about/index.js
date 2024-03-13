@@ -1,29 +1,8 @@
 import React, { useState } from 'react';
 
-//next link
-import Link from 'next/link';
 
-// next image
-import Image from 'next/image';
-
-// icons
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
 // icons
 import { RxDownload } from 'react-icons/rx';
-
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from "react-icons/si";
 
 //  data
 const aboutData = [
@@ -31,28 +10,28 @@ const aboutData = [
     title: 'Languages',
     info: [
       {
-        image: '/java.png',
-        name: 'Java',
-      },
-      {
-        image: '/python.png',
-        name: 'Python',
-      },
-      {
         image: '/html.png',
-        name: 'Html5'
-      },
-      {
-        image: '/javascript.png',
-        name: 'JavaScript',
+        name: 'HTML'
       },
       {
         image: '/css.png',
         name: 'CSS',
       },
       {
+        image: '/javascript.png',
+        name: 'JavaScript',
+      },
+      {
         image: '/typescript.png',
         name: 'TypeScript'
+      },
+      {
+        image: '/java.png',
+        name: 'Java',
+      },
+      {
+        image: '/python.png',
+        name: 'Python',
       },
     ],
   },
@@ -225,16 +204,26 @@ const About = () => {
         <Avatar />
       </motion.div>
       <div className='container mx-auto h-fit flex flex-col justify-between md:justify-around lg:justify-between xl:flex-row gap-x-6'>
-        <div className='flex flex-col items-center xl:items-start md:gap-y-10 xl:gap-y-8'>
-          {/* text */}
+        <div className='flex flex-col items-center xl:items-start md:gap-y- xl:gap-y-'>
+          {/* subtitle */}
           <motion.h2 
             variants={fadeIn('right', 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='font-semibold text-2xl lg:h2 mb-3'>
-            Hi, I am a <span className='text-amber-500'>Software</span> developer.
+            className='font-semibold text-lg md:text-xl'>
+            <span className='text-amber-500'>Civil Engineer</span> turned <span className='text-amber-500'>Software Developer.</span>
           </motion.h2>
+          {/* title */}
+          <motion.h2 
+            variants={fadeIn('right', 0.2)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='h2 mt-1'>
+            My Shift to Tech
+          </motion.h2>
+          {/* paragraph */}
           <motion.p
             variants={fadeIn('right', 0.4)}
             initial='hidden'
@@ -242,20 +231,17 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-2 xl:mb-12 px-2 xl:px-0'
           >
-            I began my journey after completing a 16 week long bootcamp with 70+ hours a week,
-            colaborating and coding with people all over the world
-            {/* I began freelancing as a developer. Since then, I've 
-            done remote work for agencies, counsulted for startups, and 
-            collaborated on digital products for business and consumer use. */}
+            From civil engineering to <span className='text-amber-500'>web development and design</span>, I offer a dynamic and global perspective. My background helped me transition careers, and after graduating from Coding Dojo at Colorado Technical University, I began offering <span className='text-amber-500'>full-stack web solutions</span>. Regarding my preference for front-end or back-end design, I genuinely enjoy both, but I think the spices of coding are in the back end. 
           </motion.p>
+          {/* resume btn */}
           <motion.div
             variants={fadeIn('right', 0.6)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='flex flex-row-reverse mt-2 xl:ml-72'
+            className='flex flex-row-reverse mt-2 xl:ml-80'
           >
-            <button onClick={() => newTab('https://drive.google.com/file/d/1vtO8WJLPqRW6uA4qkF0okdteVzjGNsaG/view?usp=sharing')} className='btn rounded-lg border border-amber-500 max-w-[170px] p-3 xl:px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-amber-500 group'>
+            <button onClick={() => newTab('https://drive.google.com/file/d/1vtO8WJLPqRW6uA4qkF0okdteVzjGNsaG/view?usp=sharing')} className='btn rounded-lg border border-amber-500 max-w-[170px] p-3 xl:px-8 transition-all duration-300 flex items-center justify-center overflow-hidden group'>
               <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 '>Resume</span>
               <RxDownload className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
             </button>
@@ -328,10 +314,9 @@ const About = () => {
                 <div key={itemIndex} className='flex flex-col max-w-max gap-y-3 items-center'>
                   {/* icons */}
                   <img
-                  className='h-[50px] w-[50px] md:h-[100px] md:w-[100px]'
+                  className='h-[50px] w-[50px] md:h-[80px] md:w-[80px]'
                   src={item.image}
                   />
-                  {/* <Image src={item.image} width={100} height={100} alt=''/> */}
                   {/* name */}
                   <p className='font-light'>{item.name}</p>
                 </div>
