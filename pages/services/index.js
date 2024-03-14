@@ -44,7 +44,7 @@ const Services = () => {
               className="max-w-[400px] mx-auto lg:mx-0"
             >
               I offer custom website development services in <span className="text-amber-500">front-end</span>, <span className="text-amber-500">back-end</span>, and <span className="text-amber-500">full-stack</span> programming.
-              Are you experiencing a project gap or error? Let's collaborate on
+              Are you experiencing a project gap or error? Let&apos;s collaborate on
               an effective solution for long-term success.
             </motion.p>
           </div>
