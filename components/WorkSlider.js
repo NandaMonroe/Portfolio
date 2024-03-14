@@ -5,26 +5,6 @@ const workSlider = {
       images: [
         {
           title: 'title',
-          path: '/francesco.png',
-        },
-        {
-          title: 'title',
-          path: '/traveledge.png',
-        },
-        {
-          title: 'title',
-          path: '/e-smart.png',
-        },
-        {
-          title: 'title',
-          path: '/sasquatch.png',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
           path: '/thumb3.png',
         },
         {
@@ -37,7 +17,27 @@ const workSlider = {
         },
         {
           title: 'title',
+          path: '/francesco.png',
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: 'title',
           path: '/thumb4.png',
+        },
+        {
+          title: 'title',
+          path: '/traveledge.png',
+        },
+        {
+          title: 'title',
+          path: '/e-smart.png',
+        },
+        {
+          title: 'title',
+          path: '/sasquatch.png',
         },
       ],
     },
