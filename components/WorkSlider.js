@@ -2,42 +2,42 @@
 const workSlider = {
   slides: [
     {
-      images: [
+      projects: [
         {
-          title: 'title',
-          path: '/thumb3.png',
+          path: 'https://nandamonroe.github.io/MKT-Studio/',
+          image: '/thumb3.png',
         },
         {
-          title: 'title',
-          path: '/thumb2.png',
+          path: 'https://nandamonroe.github.io/Ecommerce/',
+          image: '/thumb2.png',
         },
         {
-          title: 'title',
-          path: '/thumb1.png',
+          path: 'https://nandamonroe.github.io/AkioDashboard/',
+          image: '/thumb1.png',
         },
         {
-          title: 'title',
-          path: '/francesco.png',
+          path: 'https://nandamonroe.github.io/Francesco/',
+          image: '/francesco.png',
         },
       ],
     },
     {
-      images: [
+      projects: [
         {
-          title: 'title',
-          path: '/thumb4.png',
+          path: 'https://nandamonroe.github.io/TrewDashboard/',
+          image: '/thumb4.png',
         },
         {
-          title: 'title',
-          path: '/traveledge.png',
+          path: 'http://nandamonroe.vercel.app',
+          image: '/traveledge.png',
         },
         {
-          title: 'title',
-          path: '/e-smart.png',
+          path: 'http://nandamonroe.vercel.app',
+          image: '/e-smart.png',
         },
         {
-          title: 'title',
-          path: '/sasquatch.png',
+          path: 'http://nandamonroe.vercel.app',
+          image: '/sasquatch.png',
         },
       ],
     },
@@ -61,6 +61,9 @@ import { BsArrowRight } from 'react-icons/bs';
 // next image
 import Image from 'next/image';
 
+// next link
+import Link from 'next/link';
+
 const WorkSlider = () => {
   return (
     <Swiper 
@@ -75,15 +78,18 @@ const WorkSlider = () => {
           return (
             <SwiperSlide key={index}>
               <div className='grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer'>
-                {slide.images.map((image, index) => {
+                {slide.projects.map((project, index) => {
                   return (
-                    <div
+                    <Link
+                      href={project.path}
+                      target={'_blank'}
+                      rel={'noopener noreferrer'}
                       className='relative rounded-lg overflow-hidden flex items-center justify-center group'
                       key={index}
                     >
                       <div className='flex items-center justify-center relative overflow-hidden group'>
                         {/* image */}
-                        <Image src={image.path} width={500} height={100} alt='' />
+                        <Image src={project.image} width={500} height={100} alt='' />
                         {/* overlay gradient */}
                         <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#e87e38] to-[#923020] opacity-0 group-hover:opacity-80 transition-all duration-700'></div>
                         {/* title */}
@@ -100,7 +106,7 @@ const WorkSlider = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   )
                 })}
               </div>
