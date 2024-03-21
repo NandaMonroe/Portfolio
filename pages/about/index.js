@@ -240,7 +240,7 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='flex flex-row-reverse mt-2 xl:ml-80'
+            className='hidden md:flex flex-row-reverse mt-2 xl:ml-80'
           >
             <button onClick={() => newTab('https://drive.google.com/file/d/1vtO8WJLPqRW6uA4qkF0okdteVzjGNsaG/view?usp=sharing')} className='btn rounded-lg border border-amber-500 max-w-[170px] p-3 xl:px-8 transition-all duration-300 flex items-center justify-center overflow-hidden group'>
               <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 '>Resume</span>
