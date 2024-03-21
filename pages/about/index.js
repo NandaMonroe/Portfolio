@@ -229,7 +229,7 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-[500px] mx-auto xl:mx-0 mb-2 xl:mb-12 text-sm'
+            className='max-w-[500px] mx-auto xl:mx-0 mb-2 xl:mb-12 text-sm xl:text-base'
             style={{lineHeight: '1.8'}}
           >
             From civil engineering to <span className='text-amber-500'>web development and design</span>, I offer a dynamic and global perspective. My background helped me transition careers, and after graduating from Coding Dojo at Colorado Technical University, I began offering <span className='text-amber-500'>full-stack web solutions</span>. Regarding my preference for front-end or back-end design, I genuinely enjoy both, but I think the spices of coding are in the back end. 
