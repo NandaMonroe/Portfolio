@@ -119,11 +119,11 @@ const WorkSlider = () => {
                       {/* overlay gradient */}
                       <div className="absolute inset-0 bg-gradient-to-r from-[#e87e38] to-[#923020] opacity-0 group-hover:opacity-90 transition-all duration-700"></div>
                       {/* title */}
-                      <div className="absolute flex flex-col items-center gap-5 mt-20 translate-y-full group-hover:-translate-y-10 group-hover:xl-translate-y-20 transition-all duration-300">
+                      <div className="absolute flex flex-col items-center gap-1 xl:gap-5 mt-20 translate-y-full group-hover:-translate-y-10 group-hover:xl-translate-y-20 transition-all duration-300">
                         <div className="text-black/80 text-xl lg:text-3xl italic font-bold translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-100">
                           {project.title}
                         </div>
-                        <p className="text-white/80 italic font-semibold translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-100">
+                        <p className="text-xs lg:text-base text-white/80 italic font-semibold translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-100">
                           {project.desc}
                         </p>
                         <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
@@ -132,7 +132,7 @@ const WorkSlider = () => {
                             href={project.demo}
                             target={"_blank"}
                             rel={"noopener noreferrer"}
-                            className="btn cursor-pointer rounded-lg bg-black/70 border-black border-2 hover:bg-black/50 hover:shadow-md text-white/80 font-semibold p-3 xl:px-5 transition-all duration-300 flex items-center justify-center overflow-hidden group delay-200"
+                            className="btn cursor-pointer rounded-lg lg:bg-black/70 lg:border-black lg:border-2 hover:bg-black/50 hover:shadow-md text-xs lg:text-base  text-white/80 font-semibold lg:p-3 xl:px-5 transition-all duration-300 flex items-center justify-center overflow-hidden group delay-200"
                           >
                             DEMO
                           </Link>
@@ -141,7 +141,7 @@ const WorkSlider = () => {
                             href={project.github}
                             target={'_blank'}
                             rel={'noopener noreferrer'}
-                            className="btn cursor-pointer rounded-lg bg-black/70 border-black border-2 hover:bg-black/50 hover:shadow-md text-white/80 font-semibold p-3 xl:px-5 flex items-center justify-center overflow-hidden group translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-300"
+                            className="btn cursor-pointer rounded-lg lg:bg-black/70 lg:border-black lg:border-2 hover:bg-black/50 hover:shadow-md text-xs lg:text-base  text-white/80 font-semibold lg:p-3 xl:px-5 transition-all duration-300 flex items-center justify-center overflow-hidden group translate-y-[500%] group-hover:translate-y-0 delay-300"
                           >
                             CODE
                           </Link>
